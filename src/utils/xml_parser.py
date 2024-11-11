@@ -26,7 +26,7 @@ def create_record(record_tags, node):
     return return_value
 
 
-def get_value(element, path, namespace=_XMLNS):
+def get_value(element, path, namespace=None):
     """
     Get the value of the element at the given path
     :param element:
@@ -34,6 +34,8 @@ def get_value(element, path, namespace=_XMLNS):
     :param namespace:
     :return:
     """
+    if namespace is None:
+        namespace = _XMLNS
     target = element.find(path, namespace)
     return target.text if target is not None else None
 

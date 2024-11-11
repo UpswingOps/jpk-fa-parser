@@ -68,9 +68,10 @@ class TestXMLParser(unittest.TestCase):
         """
         expected_data = {
             "Naglowek": [{'KodFormularza': 'JPK_FA', 'WariantFormularza': '4'}],
-            "Podmiot1": [{'NIP': 'VATEU Adres Firmy 1', 'PelnaNazwa': 'Nazwa Firmy 1', 'KodKraju': 'PL',
-                          'Wojewodztwo': 'kujawsko-pomorskie'}],
-            "Faktura": [{'KodWaluty': 'EUR', 'P_1': '2019-01-01'}, {'KodWaluty': 'EUR', 'P_1': '2019-02-01'}],
+            "Podmiot1": [{'NIP': 'VATEU Adres Firmy 1', 'PelnaNazwa': 'Nazwa Firmy 1',
+                          'KodKraju': 'PL', 'Wojewodztwo': 'kujawsko-pomorskie'}],
+            "Faktura": [{'KodWaluty': 'EUR', 'P_1': '2019-01-01'},
+                        {'KodWaluty': 'EUR', 'P_1': '2019-02-01'}],
             'FakturaCtrl': [{'LiczbaFaktur': '2', 'WartoscFaktur': '10.00'}],
             "FakturaWiersz": [{'P_2B': 'FS 1/01/2019', 'P_7': 'Pozycja faktury'},
                               {'P_2B': 'FS 2/02/2019', 'P_7': 'Pozycja faktury'}],
