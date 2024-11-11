@@ -1,15 +1,22 @@
+"""
+Main script to parse XML file and save to CSV/JSON or PostgreSQL
+"""
+import os
+import sys
+
+from dotenv import load_dotenv
+
 from src.utils.db_writer import save_to_postgresql
 from src.utils.file_writer import save_to_csv, save_to_json
 from src.utils.utils import pretty_print_xml, load_text_file, save_text_file
 from src.utils.xml_parser import parse_xml_to_dict
 
-from dotenv import load_dotenv
-
-import os
-import sys
-
 
 def main():
+    """
+    Main function
+    :return:
+    """
     if len(sys.argv) < 3:
         print("Usage: python script.py <xml_file> <db_or_csv_or_json>")
         sys.exit(1)
@@ -31,7 +38,7 @@ def main():
             # print(file_content)
             output_content = pretty_print_xml(file_content)
             # print(output_content)
-            save_text_file(f"pretty.xml", output_content)
+            save_text_file("pretty.xml", output_content)
 
         elif action == "db":
             db_config = {

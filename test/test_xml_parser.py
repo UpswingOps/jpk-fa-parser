@@ -1,10 +1,16 @@
+"""
+Test XML parser functions
+"""
 import unittest
 import xml.etree.ElementTree as ET
 from io import StringIO
-from src.utils.xml_parser import parse_xml_to_dict, createRecord, get_value
+from src.utils.xml_parser import parse_xml_to_dict, create_record, get_value
 
 
 class TestXMLParser(unittest.TestCase):
+    """
+    Test XML parser functions
+    """
 
     def setUp(self):
         self.xml_content = """<?xml version="1.0" encoding="utf-8"?>
@@ -56,6 +62,10 @@ class TestXMLParser(unittest.TestCase):
         self.record_tags = [{"tag": "ns1:KodFormularza", "name": "KodFormularza"}]
 
     def test_parse_xml_to_dict(self):
+        """
+        Test parse_xml_to_dict function
+        :return:
+        """
         expected_data = {
             "Naglowek": [{'KodFormularza': 'JPK_FA', 'WariantFormularza': '4'}],
             "Podmiot1": [{'NIP': 'VATEU Adres Firmy 1', 'PelnaNazwa': 'Nazwa Firmy 1', 'KodKraju': 'PL',
@@ -69,15 +79,23 @@ class TestXMLParser(unittest.TestCase):
         result = parse_xml_to_dict(self.xml_file)
         self.assertEqual(result, expected_data)
 
-    def test_createRecord(self):
+    def test_create_record(self):
+        """
+        Test create_record function
+        :return:
+        """
         tree = ET.parse(self.xml_file)
         root = tree.getroot()
         node = root.find("ns1:Naglowek", {'ns1': 'http://jpk.mf.gov.pl/wzor/2022/02/17/02171/'})
-        result = createRecord(self.record_tags, node)
+        result = create_record(self.record_tags, node)
         expected_record = {"KodFormularza": "JPK_FA"}
         self.assertEqual(result, expected_record)
 
     def test_get_value(self):
+        """
+        Test get_value function
+        :return:
+        """
         tree = ET.parse(self.xml_file)
         root = tree.getroot()
         node = root.find("ns1:Naglowek", {'ns1': 'http://jpk.mf.gov.pl/wzor/2022/02/17/02171/'})

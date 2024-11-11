@@ -1,3 +1,6 @@
+"""
+Tags for the `FakturaWiersz` model.
+"""
 FakturaWierszTags = [
     {"name": "P_2B", "tag": "ns1:P_2B", "type": "string"},
     {"name": "P_7", "tag": "ns1:P_7", "type": "string200"},

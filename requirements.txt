@@ -2,3 +2,4 @@
 pandas==2.2.3
 psycopg2==2.9.10
 python-dotenv==1.0.1
+pylint==3.3.1

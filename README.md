@@ -36,24 +36,48 @@ In Subiekt 123 go to `Księgowość` -> `+` icon on top right -> select `Faktury
 .venv\Scripts\python -m unittest
 ```
 
+## Linting
+
+```bash
+.venv\Scripts\python -m pylint **/*.py
+```
+
 ## Usage
 
-# Export to CSV
+### Export to CSV
 
 ```bash
 .venv\Scripts\python main.py input.xml csv
 ```
+or
+```bash
+start.bat csv
+```
 
-# Export to JSON
+### Export to JSON
 
 ```bash
 .venv\Scripts\python main.py input.xml json
 ```
+or
+```bash
+start.bat json
+```
 
-# Export to DB
+### Export to DB
 
 ```bash
 .venv\Scripts\python main.py input.xml db
+```
+or
+```bash
+start.bat db
+```
+
+### Clear output directories
+
+```bash
+start.bat clear
 ```
 
 ## License

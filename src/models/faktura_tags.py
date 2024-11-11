@@ -1,3 +1,6 @@
+"""
+Tags for the `Faktura` model.
+"""
 FakturaTags = [
     {"name": "KodWaluty", "tag": "ns1:KodWaluty", "type": "string"},
     {"name": "P_1", "tag": "ns1:P_1", "type": "date"},

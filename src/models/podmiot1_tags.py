@@ -1,3 +1,6 @@
+"""
+Tags for the `Podmiot1` model.
+"""
 Podmiot1Tags = [
     {"name": "NIP", "tag": "ns1:IdentyfikatorPodmiotu/ns1:NIP", "type": "string"},
     {"name": "PelnaNazwa", "tag": "ns1:IdentyfikatorPodmiotu/ns1:PelnaNazwa", "type": "string"},

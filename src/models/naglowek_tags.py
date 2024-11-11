@@ -1,3 +1,6 @@
+"""
+Tags for the `Naglowek` model.
+"""
 NaglowekTags = [
     {"name": "KodFormularza", "tag": "ns1:KodFormularza", "type": "string"},
     {"name": "WariantFormularza", "tag": "ns1:WariantFormularza", "type": "string"},

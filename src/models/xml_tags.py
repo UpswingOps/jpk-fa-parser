@@ -1,3 +1,6 @@
+"""
+This module contains a dictionary with XML tags and their corresponding structures.
+"""
 from src.models.faktura_ctrl_tags import FakturaCtrlTags
 from src.models.faktura_tags import FakturaTags
 from src.models.faktura_wiersz_ctrl_tags import FakturaWierszCtrlTags

@@ -1,3 +1,6 @@
+"""
+Database writer
+"""
 import sys
 
 import psycopg2

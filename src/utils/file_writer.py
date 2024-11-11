@@ -1,5 +1,8 @@
-import pandas as pd
+"""
+File writer utility functions
+"""
 import os
+import pandas as pd
 
 OUTPUT_CSV_DIR = "output_csv"
 OUTPUT_JSON_DIR = "output_json"

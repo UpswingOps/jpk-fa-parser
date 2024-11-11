@@ -1,3 +1,6 @@
+"""
+Utility functions.
+"""
 import xml.dom.minidom
 import json
 

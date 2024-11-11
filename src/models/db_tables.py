@@ -1,3 +1,6 @@
+"""
+DB tables for the database.
+"""
 from src.models.faktura_ctrl_tags import FakturaCtrlTags
 from src.models.faktura_tags import FakturaTags
 from src.models.faktura_wiersz_ctrl_tags import FakturaWierszCtrlTags
