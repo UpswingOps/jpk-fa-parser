@@ -1,6 +1,6 @@
 # jpk-fa-parser
 
-JPK FA parser - a simple Python script to parse JPK_FA XML file to CSV, JSON or DB.
+JPK FA parser - a simple Python script to parse JPK_FA XML file and convert loaded data to CSV, JSON or DB.
 
 What is JPK (in Polish) https://poradnikprzedsiebiorcy.pl/-jpk-fa-struktura-wszystko-co-warto-wiedziec
 
