@@ -50,5 +50,3 @@ def check_if_path_exists_if_not_create(path: str):
     if not os.path.exists(path):
         os.makedirs(path)
         print(f"Path '{path}' created.")
-    else:
-        print(f"Path '{path}' already exists.")

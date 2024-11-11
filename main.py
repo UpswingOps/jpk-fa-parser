@@ -23,7 +23,6 @@ def main():
         data = parse_xml_to_dict(xml_file)
 
         if action == "csv":
-            print(data)
             save_to_csv(data)
         elif action == "json":
             save_to_json(data)

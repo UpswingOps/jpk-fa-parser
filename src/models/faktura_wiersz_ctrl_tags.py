@@ -1,4 +1,4 @@
 FakturaWierszCtrlTags = [
-    {"name": "LiczbaWierszyFaktur", "tag": "ns1:LiczbaWierszyFaktur", "type": "string"},
-    {"name": "WartoscWierszyFaktur", "tag": "ns1:WartoscWierszyFaktur", "type": "string"}
+    {"name": "LiczbaWierszyFaktur", "tag": "ns1:LiczbaWierszyFaktur", "type": "integer"},
+    {"name": "WartoscWierszyFaktur", "tag": "ns1:WartoscWierszyFaktur", "type": "float"}
 ]

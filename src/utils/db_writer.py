@@ -23,8 +23,14 @@ def create_db_tables(db_config):
                 db_columns.append(f"{tag.get('name')} FLOAT")
             elif tag.get("type") == "integer":
                 db_columns.append(f"{tag.get('name')} INTEGER")
+            elif tag.get("type") == "boolean":
+                db_columns.append(f"{tag.get('name')} BOOLEAN")
+            elif tag.get("type") == "string100":
+                db_columns.append(f"{tag.get('name')} VARCHAR(100)")
+            elif tag.get("type") == "string200":
+                db_columns.append(f"{tag.get('name')} VARCHAR(200)")
             else:
-                db_columns.append(f"{tag.get('name')} VARCHAR(80)")
+                db_columns.append(f"{tag.get('name')} VARCHAR(50)")
 
         create_table_sql = f"CREATE TABLE IF NOT EXISTS {key} ({', '.join(db_columns)})"
 
