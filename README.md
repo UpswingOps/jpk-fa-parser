@@ -64,6 +64,16 @@ or
 start.bat json
 ```
 
+### Export to HTML
+
+```bash
+.venv\Scripts\python main.py input.xml html
+```
+or
+```bash
+start.bat html
+```
+
 ### Export to DB
 
 ```bash

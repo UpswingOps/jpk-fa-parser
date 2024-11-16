@@ -7,7 +7,7 @@ import sys
 from dotenv import load_dotenv
 
 from src.utils.db_writer import save_to_postgresql
-from src.utils.file_writer import save_to_csv, save_to_json
+from src.utils.file_writer import save_to_csv, save_to_json, save_to_html
 from src.utils.utils import pretty_print_xml, load_text_file, save_text_file
 from src.utils.xml_parser import parse_xml_to_dict
 
@@ -18,13 +18,13 @@ def main():
     :return:
     """
     if len(sys.argv) < 3:
-        print("Usage: python script.py <xml_file> <db_or_csv_or_json>")
+        print("Usage: python main.py [xml_file] [db|csv|json|html]")
         sys.exit(1)
 
     load_dotenv()
 
     xml_file = sys.argv[1]
-    action = sys.argv[2]
+    action = sys.argv[2].lower()
 
     try:
         data = parse_xml_to_dict(xml_file)
@@ -33,6 +33,8 @@ def main():
             save_to_csv(data)
         elif action == "json":
             save_to_json(data)
+        elif action == "html":
+            save_to_html(data)
         elif action == "pretty_xml":
             file_content = load_text_file(xml_file)
             # print(file_content)
